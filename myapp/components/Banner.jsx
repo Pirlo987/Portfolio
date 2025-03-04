@@ -1,32 +1,30 @@
 import React from "react";
 import styles from "../styles/Banner.module.css";
 
-const skills = [
-  { name: "JavaScript (React, React Native, Vanilla)", icon: "/Logo/js.png" },
-  { name: "HTML ", icon: "/Logo/html.png" },
-  { name: "CSS", icon: "/Logo/css.png" },
-  { name: "WordPress", icon: "/Logo/wordpress.png" },
-  { name: "Figma", icon: "/Logo/figma.png" },
-  { name: " Meta Ads", icon: "/Logo/meta.png" },
-  { name: "Google Ads", icon: "/Logo/googleads.png" },
-  { name: "SEO", icon: "/Logo/seo.png" },
-  { name: "IA Prompt", icon: "/Logo/IA.png" }
+const tools = [
+  { name: "Figma", description: "Design", icon: "/Logo/figma.png" },
+  { name: "WordPress", description: "Developpement", icon: "/Logo/wordpress.png" },
+  { name: "GitHub", description: "Development", icon: "/Logo/github.png" },
+  { name: "Meta", description: "Visibilité", icon: "/Logo/meta.png" },
+  { name: "SEO", description: "Visibilité & Optimisation", icon: "/Logo/seo.png" },
+  { name: "Code", description: "Développement", icon: "/Logo/js.png" }
 ];
 
-export default function Banner() {
+export default function Tools() {
   return (
-    <div className={styles.bannerContainer}>
-      <h2 className={styles.talentName}>Ma Stack et Compléments</h2>
+    <div className={styles.toolsContainer}>
+      <h2 className={styles.title}>Tools</h2>
       
-      <div className={styles.marquee}>
-        <div className={styles.marqueeContent}>
-          {skills.map((skill, index) => (
-            <div key={index} className={styles.skillItem}>
-              <img src={skill.icon} alt={skill.name} className={styles.skillIcon} />
-              <span>{skill.name}</span>
+      <div className={styles.toolsGrid}>
+        {tools.map((tool, index) => (
+          <div key={index} className={styles.toolItem}>
+            <img src={tool.icon} alt={tool.name} className={styles.toolIcon} />
+            <div className={styles.toolInfo}>
+              <h3 className={styles.toolName}>{tool.name}</h3>
+              <p className={styles.toolDescription}>{tool.description}</p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );

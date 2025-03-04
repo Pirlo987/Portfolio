@@ -19,16 +19,17 @@ function Home() {
         </p>
         
         <div className={styles.network}>
-          <Link href="#">
-            <a id={styles.logo} className={styles.activities}>
-              <img className={styles.logo} src="Logo/logo-linkedin.png" />
-            </a>
-          </Link>
-          <Link href="#">
-            <a id={styles.logo} className={styles.activities}>
-              <img className={styles.logo} src="Logo/github.png" />
-            </a>
-          </Link>
+        <Link href="https://www.linkedin.com/in/brieucvannier/" passHref>
+          <a id={styles.logo} className={styles.activities} target="_blank" rel="noopener noreferrer">
+            <img className={styles.logo} src="Logo/logo-linkedin.png" />
+          </a>
+        </Link>
+        <Link href="https://github.com/Pirlo987" passHref>
+          <a id={styles.logo} className={styles.activities} target="_blank" rel="noopener noreferrer">
+            <img className={styles.logo} src="Logo/github.png" />
+          </a>
+        </Link>
+
         </div>
 
         {/* Flèche qui invite à scroller */}
