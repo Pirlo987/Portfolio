@@ -1,0 +1,90 @@
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+/* Titre en haut à gauche */
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Grid pour afficher les 6 projets */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Style des cartes projets */
+.project {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 300px; /* Taille légèrement réduite */
+}
+
+/* Image au-dessus */
+.projectImage {
+    width: 100%;
+    height: 200px; /* Légèrement réduit */
+    object-fit: cover;
+}
+
+/* Conteneur du titre, description et bouton */
+.info {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Conteneur pour le texte */
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Titre du projet */
+.projectTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+/* Description sous le titre */
+.projectDescription {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+    margin: 0;
+}
+
+/* Bouton à droite */
+.btn {
+    padding: 6px 10px;
+    background: linear-gradient(90deg, #F9655B 0%, #EE821A 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #EE821A 0%, #F9655B 100%);
+}

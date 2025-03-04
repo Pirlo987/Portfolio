@@ -1,0 +1,118 @@
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: auto;
+    align-items: center;
+    background-color: #f8f6f3;
+    position: relative;
+    width: 100%;
+}
+
+.headerWrapper {
+    width: 100%;
+    max-width: 1200px; /* La même largeur maximale que vos autres sections */
+    margin: 0 auto; /* Centrer horizontalement */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Espacement à gauche et à droite */
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    gap: 2.5rem;
+    color: black;
+}
+
+.menu.showMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrer les éléments horizontalement */
+    background-color: #f8f6f3;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 1rem 0;
+}
+
+.link {
+    color: gray;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.link:hover {
+    color: black;
+    font-weight: 500;
+}
+
+.mid, .btn {
+    text-decoration: none;
+}
+
+/* Bouton Burger */
+.burgerMenu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.burgerMenu svg {
+    font-size: 2rem;
+    color: black;
+}
+
+.burgerMenu.open {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .burgerMenu {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu.showMenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrer les éléments */
+        width: 100%;
+        z-index: 10;
+    }
+
+    .menu a {
+        padding: 10px 20px;
+        text-align: center; /* Assurez-vous que les liens sont centrés */
+    }
+}
+
+.btn {
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: linear-gradient(90deg, hsla(4, 93%, 67%, 1) 0%, hsla(29, 86%, 52%, 1) 100%);
+    color: white;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1rem;
+}
+

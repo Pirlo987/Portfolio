@@ -1,0 +1,92 @@
+/* Conteneur principal */
+.bannerContainer {
+    width: 100%;
+    background: #f8f8f8;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Nom du talent */
+.talentName {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Marquee (défilement fluide) */
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    background: white;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+}
+
+/* Contenu de la bannière qui défile */
+.marqueeContent {
+    display: flex;
+    justify-content: space-between; /* Répartir uniformément les éléments */
+    gap: 100px; /* Espacement entre les éléments */
+    animation: scroll 15s linear infinite;
+    min-width: 100%;
+    width: 100%; /* La largeur doit occuper tout l'espace disponible */
+    flex-grow: 1;
+}
+
+/* Chaque élément (image + nom de compétence) */
+.skillItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    flex: 0 0 auto; /* Empêche le rétrécissement */
+}
+
+/* Icônes des compétences */
+.skillIcon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Texte des compétences */
+.marqueeContent span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Animation du défilement */
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .talentName {
+        font-size: 18px;
+    }
+    .skillIcon {
+        width: 35px;
+        height: 35px;
+    }
+    .marqueeContent {
+        gap: 60px; /* Moins d'écart sur mobile */
+    }
+    .marqueeContent span {
+        font-size: 14px;
+    }
+}

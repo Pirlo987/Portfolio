@@ -1,0 +1,41 @@
+.servicesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;    max-width: 1200px;
+    margin: 50px auto;
+    width: 100%;
+}
+
+.servicesTitle {
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.servicesGrid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.serviceRow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 0;
+    border-bottom: 1px solid #ddd; /* Bordure sous chaque ligne */
+}
+
+.serviceItem {
+    flex: 1;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Responsive pour mobile */
+@media screen and (max-width: 768px) {
+    .serviceRow {
+        flex-direction: column;
+        text-align: center;
+    }
+}

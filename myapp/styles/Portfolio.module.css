@@ -1,0 +1,75 @@
+/* Conteneur principal */
+.portfolioContainer {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Header de la section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.seeAll {
+    text-decoration: none;
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Grille de projets */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Cartes de projet */
+.project {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    padding: 15px;
+}
+
+/* Image du projet */
+.projectImage {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
+/* Titre du projet */
+.projectTitle {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Catégorie du projet */
+.projectCategory {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive (Mobile) */
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+}

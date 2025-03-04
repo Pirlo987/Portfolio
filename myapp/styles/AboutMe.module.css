@@ -1,0 +1,110 @@
+/* --- Conteneur principal --- */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+/* --- Contenu principal en deux colonnes --- */
+.content {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    width: 100%;
+}
+
+/* --- Titre principal --- */
+.title {
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+/* --- Partie gauche : Texte --- */
+.leftPart {
+    flex: 1.5;
+    padding-right: 40px;
+    color: #727272;
+}
+
+/* --- Partie droite : Image + Contact --- */
+.rightPart {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* --- Image de profil --- */
+
+.rightPart img {
+    width: 100%;
+    max-width: 250px; /* Ajuste selon la taille souhaitée */
+    height: auto; /* Préserve le ratio de l'image */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    object-fit: cover; /* Assure un bon affichage */
+}
+
+/* --- Bloc des contacts --- */
+.contact-info {
+    display: flex;
+    flex-direction: column; /* Aligner les éléments en colonne */
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    font-size: 1rem;
+    gap: 10px; /* Ajout d'un espacement entre email et téléphone */
+}
+
+/* --- Style des éléments de contact --- */
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacement entre l'icône et le texte */
+    margin: 5px 0;
+    font-weight: bold;
+    color: black;
+}
+
+
+/* --- Couleur du texte secondaire --- */
+.contact-info span {
+    font-weight: bold;
+    color: #333;
+}
+
+/* --- Icônes des contacts --- */
+.contact-info p:first-of-type::before { /* Icône pour email */
+    content: "📧 ";
+}
+
+.contact-info p:last-of-type::before { /* Icône pour téléphone */
+    content: "📞 ";
+}
+
+/* --- Responsive pour mobiles --- */
+@media screen and (max-width: 768px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .leftPart {
+        padding-right: 0;
+    }
+
+    .rightPart {
+        text-align: center;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        text-align: center;
+    }
+}
