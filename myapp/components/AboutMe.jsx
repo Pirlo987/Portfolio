@@ -41,7 +41,7 @@ function AboutMe() {
 
                         <div className={styles.contactInfo}>
                             <p>Email : <span>brieuc.vannier931@gmail.com</span></p>
-                            <p>Tel : <span>+689 87 30 35 79</span></p>
+                            <p>Tel : <span>+689 87 79 97 19</span></p>
                         </div>
                     </div>
                 </div>
