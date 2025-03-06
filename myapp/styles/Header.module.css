@@ -82,6 +82,42 @@
 }
 
 @media (max-width: 768px) {
+ 
+    .mid {
+        display: flex;
+        justify-content: center; /* Centre le bouton */
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center; /* Centre le texte horizontalement */
+        align-items: center; /* Centre le texte verticalement */
+        text-align: center;
+        padding: 8px 16px; /* Ajustement du padding */
+        font-size: 0.8rem;
+        width: auto; /* Ajuste la largeur au contenu */
+        min-width: 90px; /* Taille minimale pour éviter l'écrasement */
+        height: 35px; /* Assure une bonne hauteur */
+        border-radius: 8px;
+        white-space: nowrap;
+    }
+        
+    .btnText::before {
+        content: "Contact";
+    }
+
+    .btnText {
+        visibility: hidden;
+        position: relative;
+    }
+
+    .btnText::before {
+        visibility: visible;
+        position: absolute;
+    }
     .burgerMenu {
         display: block;
     }
@@ -93,9 +129,8 @@
     .menu.showMenu {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centrer les éléments */
+        align-items: center;
         width: 100%;
-        z-index: 10;
     }
 
     .menu a {

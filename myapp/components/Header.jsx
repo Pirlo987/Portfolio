@@ -48,11 +48,16 @@ function Header() {
                 </nav>
 
                 <div className={styles.mid}>
-                    <a href="mailto:brieuc.vannier931@gmail.com?subject=Prise de rendez-vous&body=Bonjour, je souhaiterais prendre un rendez-vous avec vous." 
-                    className={styles.btn}>
+                <a 
+                    href="mailto:brieuc.vannier931@gmail.com?subject=Prise de rendez-vous&body=Bonjour, je souhaiterais prendre un rendez-vous avec vous." 
+                    className={styles.btn}
+                >
+                    <span className={styles.btnText}>
                         Prendre RDV
-                    </a>
+                    </span>
+                </a>
                 </div>
+                
             </div>
         </div>
     );
