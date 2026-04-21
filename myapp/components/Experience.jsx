@@ -3,6 +3,13 @@ import styles from "../styles/Experience.module.css";
 
 const experiences = [
     {
+      date: "Mars 2025 – Aujourd'hui",
+      company: "Ora",
+      role: "Chargé Marketing",
+      description:
+      "Gestion de projets digitaux : refonte du site internet, création d'une solution de réponse automatique. Optimisation des performances par l'analyse et la création de reportings avancés (KPI)."
+    },
+    {
       date: "October 2024 – Janvier 2025",
       company: "La Capsule",
       role: "Developpeur Mobile",
