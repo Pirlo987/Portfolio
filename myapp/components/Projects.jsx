@@ -25,6 +25,14 @@ const projects = [
     role: "Designer Graphique"
   },
   {
+    id: 11, slug: "affiche-diverses", title: "Affiche Diverses", image: "Morose.png",
+    description: "Affiches créées pour des événements imaginaires — exercices de style pour se former au design graphique.",
+    fullDescription: "Ces affiches ont été conçues dans un cadre purement formatif, sans aucun lien avec de vrais événements ou organisations. Chaque visuel est un prétexte pour explorer des univers graphiques différents — composition, typographie, traitement de l'image, ambiance. 'Morose' et 'Art Exhibition' sont deux exemples de ce travail d'exploration : des événements fictifs inventés de toutes pièces pour donner un cadre narratif aux créations. Ces exercices m'ont permis de développer ma capacité à concevoir une identité visuelle cohérente autour d'un concept, même imaginaire. Aucune de ces affiches ne correspond à un événement réel — elles sont uniquement le fruit d'un apprentissage en cours.",
+    technologies: ["Photoshop", "Illustrator", "InDesign"],
+    role: "Designer Graphique",
+    gallery: ["Morose.png", "Art%20Exhibition.png", "OraBox.png"]
+  },
+  {
     id: 9, slug: "blender", title: "Blender", image: "blender.png",
     description: "Création de visuels 3D — aux débuts d'un apprentissage passionnant.",
     fullDescription: "La 3D est un univers fascinant mais redoutablement complexe, et je n'en suis qu'au début de mon apprentissage. À travers Blender, je m'initie progressivement à la modélisation, à l'éclairage, aux matériaux et au rendu. Ces premières créations sont autant d'exercices pour comprendre la logique de cet outil puissant et développer mon œil pour la composition 3D. Mon objectif à terme est de pouvoir concevoir des scènes animées en 3D — pour la mise en valeur de produits, la création de contenus visuels percutants ou des expériences immersives. Un chantier de long terme, mais une direction qui m'enthousiasme vraiment.",

@@ -27,9 +27,7 @@ function Home() {
         <div className={styles.heroContent}>
           <h1 className={styles.title}>Web, Marketing & Design <br /> All in one</h1>
           <p className={styles.paragraphe}>
-            Hello, je suis Brieuc, un developper frontend mais
-            aussi chargé de webmarketing afin d'assurer une visibilité sur le digital.
-            Une dernière chose, je design aussi !
+            Je code, je crée, je performe. Du développement frontend à la stratégie digitale, en passant par le design — je construis des expériences qui marquent et des présences en ligne qui convertissent.
           </p>
 
           <div className={styles.network}>
