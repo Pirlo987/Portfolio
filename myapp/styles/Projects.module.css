@@ -5,86 +5,76 @@
     padding: 50px 0;
 }
 
-/* Titre en haut à gauche */
-.title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-/* Grid pour afficher les 6 projets */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
-/* Style des cartes projets */
 .project {
-    background: white;
+    position: relative;
     border-radius: 10px;
     overflow: hidden;
+    height: 300px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    height: 300px; /* Taille légèrement réduite */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Image au-dessus */
+.project:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
 .projectImage {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: 200px; /* Légèrement réduit */
+    height: 100%;
     object-fit: cover;
 }
 
-/* Conteneur du titre, description et bouton */
 .info {
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 1;
-}
-
-/* Conteneur pour le texte */
-.textContainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 18px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
-/* Titre du projet */
 .projectTitle {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #333;
+    color: #fff;
     margin: 0;
 }
 
-/* Description sous le titre */
 .projectDescription {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 5px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
     margin: 0;
 }
 
-/* Bouton à droite */
 .btn {
-    padding: 6px 10px;
+    padding: 6px 16px;
     background: linear-gradient(90deg, #F9655B 0%, #EE821A 100%);
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
+    transition: opacity 0.2s;
+    margin-top: 4px;
 }
 
 .btn:hover {
-    background: linear-gradient(90deg, #EE821A 0%, #F9655B 100%);
+    opacity: 0.85;
 }

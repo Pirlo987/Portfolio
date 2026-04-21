@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import styles from '../styles/Home.module.css';
 import Header from './Header';
 import Link from 'next/link';
@@ -7,6 +8,8 @@ import { FaArrowDown } from "react-icons/fa"; // Import de la flèche
 import Portfolio from './Portfolio';
 import Banner from './Banner';
 import Layout from './Layout'; // Import du Layout
+
+const Scene3D = dynamic(() => import('./Scene3D'), { ssr: false });
 
 function Home() {
   return (
@@ -17,27 +20,32 @@ function Home() {
       </Head>
 
       <div className={styles.container}>
-        <h1 className={styles.title}>Web, Marketing & Design <br /> All in one</h1>
-        <p className={styles.paragraphe}>
-          Hello, je suis Brieuc, un developper frontend mais 
-          aussi chargé de webmarketing afin d'assurer une visibilité sur le digital. 
-          Une dernière chose, je design aussi !
-        </p>
-        
-        <div className={styles.network}>
-          <Link href="https://www.linkedin.com/in/brieucvannier/" passHref>
-            <a id={styles.logo} className={styles.activities} target="_blank" rel="noopener noreferrer">
-              <img className={styles.logo} src="Logo/logo-linkedin.png" alt="LinkedIn" />
-            </a>
-          </Link>
-          <Link href="https://github.com/Pirlo987" passHref>
-            <a id={styles.logo} className={styles.activities} target="_blank" rel="noopener noreferrer">
-              <img className={styles.logo} src="Logo/github.png" alt="GitHub" />
-            </a>
-          </Link>
+        <div className={styles.sceneWrapper}>
+          <Scene3D />
         </div>
 
-        {/* Flèche qui invite à scroller */}
+        <div className={styles.heroContent}>
+          <h1 className={styles.title}>Web, Marketing & Design <br /> All in one</h1>
+          <p className={styles.paragraphe}>
+            Hello, je suis Brieuc, un developper frontend mais
+            aussi chargé de webmarketing afin d'assurer une visibilité sur le digital.
+            Une dernière chose, je design aussi !
+          </p>
+
+          <div className={styles.network}>
+            <Link href="https://www.linkedin.com/in/brieucvannier/" passHref>
+              <a id={styles.logo} className={styles.activities} target="_blank" rel="noopener noreferrer">
+                <img className={styles.logo} src="Logo/logo-linkedin.png" alt="LinkedIn" />
+              </a>
+            </Link>
+            <Link href="https://github.com/Pirlo987" passHref>
+              <a id={styles.logo} className={styles.activities} target="_blank" rel="noopener noreferrer">
+                <img className={styles.logo} src="Logo/github.png" alt="GitHub" />
+              </a>
+            </Link>
+          </div>
+        </div>
+
         <div className={styles.arrow}>
           <FaArrowDown />
         </div>
